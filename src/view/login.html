@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../asset/commonStyle/commonCss.css">
+    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
+
+</head>
+<body>
+    <script src="../../node_modules/layui-src/src/layui.js"></script>
+    <script src="../asset/commonJs/layui.js"></script>
+    <!--<div class="centerBox" style="width:670px; height: 450px;">-->
+    <h1 style="text-align: center">登录</h1>
+    <form class="layui-form" action="">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色</label>
+            <div class="layui-input-block">
+                <select name="interest" lay-filter="aihao">
+                    <option value=""></option>
+                    <option value="0">建设方</option>
+                    <option value="1">施工方</option>
+                    <option value="2">质量监督管理部门</option>
+                    <option value="3">住建部门</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">账号</label>
+            <div class="layui-input-block">
+                <input type="text" name="username" lay-verify="required" lay-reqtext="请输入账号" placeholder="请输入" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+            </div>
+        </div>
+
+        <div class="">
+            <div>
+                <
+                <a></a>
+
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">登录</button>
+            </div>
+        </div>
+    </form>
+
+
+
+
+        <!--<table class="centerBox">-->
+            <!--<tr>-->
+                <!--<td>角色</td>-->
+                <!--<td><input type="text" ></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>账号</td>-->
+                <!--<td><input type="text" ></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>密码</td>-->
+                <!--<td><input type="text" ></td>-->
+            <!--</tr>-->
+            <!--<tr>-->
+                <!--<td>验证码</td>-->
+                <!--<td><input type="text" ></td>-->
+            <!--</tr>-->
+        <!--</table>-->
+        <!--<table>-->
+            <!--<tr>-->
+                <!--<td>记住我<input type="checkbox" ></td>-->
+                <!--<td><a href="javascript:alert();">记住密码</a></td>-->
+            <!--</tr>-->
+        <!--</table>-->
+        <!--<from action="/use">-->
+            <!--<input type="button" value="登录">-->
+        <!--</from>-->
+    <!--</div>-->
+</body>
+</html>
