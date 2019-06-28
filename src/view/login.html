@@ -5,19 +5,26 @@
     <title>登录</title>
     <link rel="stylesheet" href="../asset/commonStyle/commonCss.css">
     <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
-
+    <link rel="stylesheet" href="../asset/user-login/uers-login.css">
+    <script src="../asset/commonJs/animation.js"></script>
 </head>
 <body>
     <script src="../../node_modules/layui-src/src/layui.js"></script>
     <script src="../asset/commonJs/layui.js"></script>
-    <!--<div class="centerBox" style="width:670px; height: 450px;">-->
-    <h1 style="text-align: center">登录</h1>
+
+    <script>
+        function forgetPassword() {
+            alert("你自裁吧");
+        }
+    </script>
+    <div class="centerBox" style="width:670px; height: 450px; border: 1px solid #c2c2c2" >
+    <h1 style="text-align: center; margin-top: 10px">登 录</h1>
     <form class="layui-form" action="">
 
         <div class="layui-form-item">
             <label class="layui-form-label">角色</label>
             <div class="layui-input-block">
-                <select name="interest" lay-filter="aihao">
+                <select name="interest" lay-filter="aihao" lay-verify="required" lay-reqtext="请选择角色" >
                     <option value=""></option>
                     <option value="0">建设方</option>
                     <option value="1">施工方</option>
@@ -37,56 +44,30 @@
         <div class="layui-form-item">
             <label class="layui-form-label">密码</label>
             <div class="layui-input-block">
-                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                <input type="password" name="password" lay-verify="required" lay-reqtext="请输入密码" placeholder="请输入" autocomplete="off"  class="layui-input">
             </div>
         </div>
 
-        <div class="">
-            <div>
-                <
-                <a></a>
-
+        <div class="layui-form-item">
+            <label class="layui-form-label">验证码</label>
+            <div class="layui-input-block">
+                <input type="text" name="CAPTCHA" lay-verify="required" lay-reqtext="请输入验证码" placeholder="请输入" autocomplete="off"  class="layui-input">
             </div>
         </div>
-
 
         <div class="layui-form-item">
             <div class="layui-input-block">
-                <button class="layui-btn" lay-submit="" lay-filter="demo1">登录</button>
+                <input type="checkbox" name="like[write]" title="记住我">
+                <a href="#" class="forgetPassword" onclick="forgetPassword()">忘记密码？</a>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit="" lay-filter="demo1">登 录</button>
             </div>
         </div>
     </form>
-
-
-
-
-        <!--<table class="centerBox">-->
-            <!--<tr>-->
-                <!--<td>角色</td>-->
-                <!--<td><input type="text" ></td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td>账号</td>-->
-                <!--<td><input type="text" ></td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td>密码</td>-->
-                <!--<td><input type="text" ></td>-->
-            <!--</tr>-->
-            <!--<tr>-->
-                <!--<td>验证码</td>-->
-                <!--<td><input type="text" ></td>-->
-            <!--</tr>-->
-        <!--</table>-->
-        <!--<table>-->
-            <!--<tr>-->
-                <!--<td>记住我<input type="checkbox" ></td>-->
-                <!--<td><a href="javascript:alert();">记住密码</a></td>-->
-            <!--</tr>-->
-        <!--</table>-->
-        <!--<from action="/use">-->
-            <!--<input type="button" value="登录">-->
-        <!--</from>-->
-    <!--</div>-->
+    </div>
 </body>
 </html>

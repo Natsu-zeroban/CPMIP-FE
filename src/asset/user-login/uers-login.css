@@ -1,0 +1,38 @@
+
+/*调整了输入框位置*/
+
+.layui-form-item .layui-input-block {
+    margin-left: 130px;
+    min-height: 50px;
+}
+
+.layui-form{
+    margin-top: 40px;
+}
+
+.layui-unselect .layui-form-select{
+    margin-left: 20px;
+}
+
+.layui-form-item{
+    width: 600px;
+    margin: 10px;
+}
+
+/*调整了“记住我”和“忘记密码”的位置*/
+
+.layui-form-item .layui-form-checkbox{
+    margin-left: 40px;
+}
+
+.forgetPassword{
+    padding-left: 150px;
+}
+
+/*改了登录按钮的位置和大小形状*/
+.layui-btn{
+    margin-left: 130px;
+    width: 130px;
+    border-radius: 8px;
+
+}
