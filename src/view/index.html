@@ -2,15 +2,287 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>CPMIP</title>
+    <link rel="stylesheet" href="../asset/commonStyle/commonCss.css">
+    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css"  media="all">
+    <link rel="stylesheet" href="../asset/index/index.css">
+    <link rel="stylesheet" href="../asset/index/index_base.css">
+    <link rel="stylesheet" href="../asset/index/index_style.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <td>
-                登录成功了
-            </td>
-        </tr>
-    </table>
+<script src="../../node_modules/layui-src/src/layui.js"></script>
+<!--顶部 logo 登录-->
+    <div >
+        <div  style="display:inline-block;position: absolute;left: 170px;">
+            <a href="index.html">
+                <img src="../../images/logo_1.png" alt="">
+            </a>
+        </div>
+        <div style="position:absolute;left:1250px;top: 22px;display:inline-block;"class="layui-breadcrumb" lay-separator="|"  >
+            <a href="login.html">登录</a>
+            <a href="register.html">注册</a>
+        </div>
+    </div>
+    <br><br><br><br>
+<!--导航栏-->
+<div style="float:left;left: 170px;position:absolute;top: 70px;">
+    <ul class="layui-nav layui-bg-cyan">
+    <li class="layui-nav-item"><a href="index.html">首页</a></li>
+    <li class="layui-nav-item"><a href="todo.html">工程报监</a></li>
+    <li class="layui-nav-item"><a href="todo.html">竣工备案</a></li>
+    <li class="layui-nav-item"><a href="todo.html">工程监督</a></li>
+    <li class="layui-nav-item"><a href="todo.html">资料管理</a></li>
+    <li class="layui-nav-item"><a href="todo.html">事故报告</a></li>
+    <li class="layui-nav-item"><a href="todo.html">费用管理</a></li>
+    <li class="layui-nav-item"><a href="todo.html">信息发布</a></li>
+        <li class="layui-nav-item" ><a href="todo.html">质量投诉</a></li>
+    </ul>
+</div>
+<!--主要内容-->
+
+<div class="list-main-content over-hidden" style="position:absolute;left: 180px;top: 200px;margin-bottom: 75px" id="serach_div">
+<div class="list-ll-b">
+    <div class="edit_option">
+        <h5 class="list-llb-title">
+            <span class="fl">通知公告</span>
+            <a class="fr" href="http://jzsc.mohurd.gov.cn/asite/jsbpp/jsp/news_list.jsp">更多>></a>
+        </h5>
+        <div class="list-llb-box">
+            <ul class="list-llb-s">
+                <li class="list-llb-list" title=关于批准2019年第十批建设工程企业资质延续的通知>
+                    <!--置顶-->
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190624_240959.html">
+                        <span class="list-llb-text"><em style="font-style: normal;color:#bc0102">【置顶】</em>关于批准2019年第十批建设工程企业资质延续的通知</span>
+                        <em class="fr list-date-a">[2019.06.24]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=关于2019年第十二批申请勘察设计注册工程师
+                    初始注册审查意见的公示>
+
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190624_240960.html">
+                        <span class="list-llb-text">关于2019年第十二批申请勘察设计注册工程师初始注册审查意见的公示</span>
+                        <em class="fr list-date-a">[2019.05.24]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=关于2019年第十二批申请监理工程师初始注册审查意见的公示>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190624_240961.html">
+                        <span class="list-llb-text">关于2019年第十二批申请监理工程师初始注册审查意见的公示</span>
+                        <em class="fr list-date-a">[2019.06.24]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=住房和城乡建设部关于2019年第十八批一级建造师注册人员名单的公告>
+
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190624_240952.html">
+                        <span class="list-llb-text">住房和城乡建设部关于2019年第十八批一级建造师注册人员名单的公告</span>
+                        <em class="fr list-date-a">[2019.06.24]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=关于建筑业企业资质告知承诺审批意见的公示>
+                    <!--置顶-->
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190621_240937.html">
+                        <span class="list-llb-text">关于建筑业企业资质告知承诺审批意见的公示</span>
+                        <em class="fr list-date-a">[2019.06.21]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=2018年全国工程勘察设计统计公报>
+
+                    <!--置顶-->
+                    <a target="_blank" href="http://www.mohurd.gov.cn/xytj/tjzljsxytjgb/tjxxtjgb/201906/t20190621_240943.html">
+                        <span class="list-llb-text">2018年全国工程勘察设计统计公报</span>
+                        <em class="fr list-date-a">[2019.06.21]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=关于建设工程企业资质专家审查意见的公示>
+
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190605_240758.html">
+                        <span class="list-llb-text">关于建设工程企业资质专家审查意见的公示</span>
+                        <em class="fr list-date-a">[2019.06.05]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=关于批准2019年第九批建设工程企业资质延续的通知>
+
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190604_240747.html">
+                        <span class="list-llb-text">关于批准2019年第九批建设工程企业资质延续的通知</span>
+                        <em class="fr list-date-a">[2019.06.04]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=河南省开展建筑工程专项治理行动 打击施工发包与承包违法行为>
+
+                    <!--置顶-->
+                    <a target="_blank" href="http://www.mohurd.gov.cn/dfxx/201905/t20190528_240687.html">
+                        <span class="list-llb-text">河南省开展建筑工程专项治理行动打击施工发包与承包违法行为</span>
+                        <em class="fr list-date-a">[2019.05.28]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=河南3个月全面排查工程建设领域“挂证”行为>
+
+                    <a target="_blank" href="http://www.mohurd.gov.cn/dfxx/201905/t20190527_240682.html">
+                        <span class="list-llb-text">河南3个月全面排查工程建设领域“挂证”行为</span>
+                        <em class="fr list-date-a">[2019.05.27]</em>
+                    </a>
+                </li>
+                <li class="list-llb-list" title=辽宁营口推广使用建筑工人实名制系统>
+
+                    <a target="_blank" href="http://www.mohurd.gov.cn/dfxx/201904/t20190430_240432.html">
+                        <span class="list-llb-text">辽宁营口推广使用建筑工人实名制系统</span>
+                        <em class="fr list-date-a">[2019.05.27]</em>
+                    </a>
+                </li>
+
+            </ul></div>
+    </div>
+</div>
+</div>
+<div class="layui-carousel" id="test10" lay-filter="test4" style="position:absolute;left:742px;top: 200px;height: 400px !important;">
+    <div carousel-item="" >
+        <div><img src="../../images/form_1.jpg" height="350" width=550></div>
+        <div><img src="../../images/form_2.jpg"height="350" width="550"></div>
+        <div><img src="../../images/form_3.jpg"height="350" width="550"></div>
+        <div><img src="../../images/form_4.jpg"height="350" width="550"></div>
+        <div><img src="../../images/form_5.jpg"height="350" width="550"></div>
+    </div>
+</div>
+<div class="list-ll-b"  style="position:absolute;left: 742px;top: 600px;height: 350px;">
+    <div class="edit_option">
+        <h5 class="list-llb-title">
+            <span class="fl">政策文件</span>
+            <a class="fr" href="http://jzsc.mohurd.gov.cn/asite/jsbpp/jsp/news_list.jsp">更多>></a>
+        </h5>
+    </div>
+    <div class="list-llb-box">
+        <ul class="list-llc-two">
+            <div class="edit_option">
+                <li class="text-over" title=住房和城乡建设部办公厅关于徐州汉源建设集团有限公司等182家建设工程企业资质申报弄虚作假行为的通报>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201906/t20190603_240742.html">住房和城乡建设部办公厅关于徐州汉源建设集团有限公司等182家...</a>
+                </li>
+
+                <li class="text-over" title=住房和城乡建设部办公厅关于同意北京市提高监理工程师职业资格考试报名条件试点的复函>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201905/t20190527_240683.html">住房和城乡建设部办公厅关于同意北京市提高监理工程师职业资格考试报...</a>
+
+                </li>
+                <li class="text-over" title=住房和城乡建设部办公厅关于江西省住房和城乡建设厅推行电子证照的复函>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201904/t20190430_240423.html">住房和城乡建设部办公厅关于江西省住房和城乡...</a>
+
+                </li>
+                <li class="text-over" title=住房和城乡建设部办公厅关于四川巴蜀水利工程有限公司等5家建设工程企业采用告知承诺制申报弄虚作假行为的通报>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201904/t20190409_240121.html">住房和城乡建设部办公厅关于四川巴蜀水利工程有限公司...</a>
+
+                </li>
+                <li class="text-over" title=住房和城乡建设部办公厅关于实行建筑业企业资质审批告知承诺制的通知>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201903/t20190329_239951.html">住房和城乡建设部办公厅关于实行建筑业企业资质...</a>
+
+                </li>
+                <li class="text-over" title=关于印发住房和城乡建设部建筑市场监管司2019年工作要点的通知>
+                    <a target="_blank" href="http://www.mohurd.gov.cn/wjfb/201903/t20190326_239912.html">关于印发住房和城乡建设部建筑市场监管司2019年工作要点的通知</a>
+
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>
+
+<!--页面尾部-->
+<div class="footer-a "style="position:absolute;left:180px;top: 1000px;">
+    <div>
+        <div class="footer-b">
+            <ul class="footer-main">
+                <li class="footer-main-a">
+                    <h5>联系我们</h5>
+                    <p>Tel : 130-6007-6906</p>
+                    <p>E-mail : 1009122393@qq.com</p>
+                    <p>成都市双流县川大路 四川大学江安校区 邮编：610207</p>
+                </li>
+
+                <li class="footer-main-b" style="padding-left: 0">
+                    <h5 s>技术支持</h5>
+                    <div class="edit_option" >
+                        <div class="footer-main-box">
+                            <a href="index.html">CPMIP项目组</a>
+                        </div>
+                </li >
+                <li class="footer-main-c">
+                    <h5>微信公众号</h5>
+                    <div class="edit_option">
+                        <div class="edit_cz"><a href="javascript:void(0)" onclick="parent.edit('NC','08')">编辑</a> </div>
+                        <div class="footer-main-boxs">
+                            <a><img src="../../images/QR_Code.jpg" alt=""></a>
+<!--                            <a href="http://metc.scu.edu.cn/"><img src="http://jwc.scu.edu.cn/upload/1524036485943icon7.jpg" alt=""></a>-->
+                        </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="edit_option">
+        <div class="edit_cz"><a href="javascript:void(0)" onclick="parent.edit('BQ','09')">编辑</a> </div>
+
+        <div class="footer-bottom"><div>
+            <div>CPMIP项目组 版权所有</div>
+        </div></div>
+    </div>
+</div>
+<script src="../asset/commonJs/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use('element', function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+        //监听导航点击
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+    layui.use(['carousel', 'form'], function(){
+        var carousel = layui.carousel
+            ,form = layui.form;
+        //图片轮播
+        carousel.render({
+            elem: '#test10'
+            ,width: '550px'
+            ,height: '350px'
+            ,interval: 3000
+        });
+        //事件
+        carousel.on('change(test4)', function(res){
+            console.log(res)
+        });
+        var $ = layui.$, active = {
+            set: function(othis){
+                var THIS = 'layui-bg-normal'
+                    ,key = othis.data('key')
+                    ,options = {};
+                othis.css('background-color', '#5FB878').siblings().removeAttr('style');
+                options[key] = othis.data('value');
+                ins3.reload(options);
+            }
+        };
+
+        //监听开关
+        form.on('switch(autoplay)', function(){
+            ins3.reload({
+                autoplay: this.checked
+            });
+        });
+
+        $('.demoSet').on('keyup', function(){
+            var value = this.value
+                ,options = {};
+            if(!/^\d+$/.test(value)) return;
+
+            options[this.name] = value;
+            ins3.reload(options);
+        });
+
+        //其它示例
+        $('.demoTest .layui-btn').on('click', function(){
+            var othis = $(this), type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+    });
+</script>
 </body>
+
 </html>
