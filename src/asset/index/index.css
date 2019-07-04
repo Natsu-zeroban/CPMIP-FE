@@ -1,6 +1,0 @@
-@charset "UTF-8";
-body, blockquote, ul, ol, input, textarea, button, select, a, h1, i, b, small, em, h2, h3, h4, h5, img, table, fieldset, button, div, p, img, span, li, dl, dt, dd, font, label, pre, nav, video, audio, embed, tr, th, td, form {margin: 0;padding: 0;}
-
-article, aside, dialog, footer, header, section, footer, nav, figure, menu {
-
-    display: block; }

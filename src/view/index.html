@@ -7,43 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>CPMIP</title>
     <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
-    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
-    <link rel="stylesheet" href="../asset/index/index.css">
-    <link rel="stylesheet" href="../asset/index/index_base.css">
-    <link rel="stylesheet" href="../asset/index/index_style.css">
-
+    <link rel="stylesheet" href="../page/index/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" href="../page/index/index.css">
 </head>
 <body>
 <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-<script src="../../node_modules/layui-src/src/layui.js"></script>
-<script src="../page/commonJs/layui.js"></script>
-
-
+<script src="../page/index/layui/layui.js" charset="utf-8"></script>
 <!--顶部 logo 登录-->
-    <div id="header"></div>
-
-
-<!--主要内容-->
-
-<div id="content">
-
-</div>
-
-
+<div id="header" class="list-top"></div>
+<!--页面内容-->
+<div id="content" class="list-main-content over-hidden" style="padding-top: 40px;margin-bottom: 75px" ></div>
 <!--页面尾部-->
-    <div id="footer"></div>
-
+<div id="footer" class="footer-a"></div>
 
 <script>
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
-    // if()
-    $("#content").load("content.html");
-    $("#personal").onclick(function (){
-        $("#content").load("personal.html");
-    })
+    $("#header").load("header.html")
+    $("#footer").load("footer.html")
+    //if()
+    $("#content").load("content.html")
+    // $("#personal").onclick(function (){
+    //     $("#content").load("personal.html");
+    // })
 </script>
 
-
 </body>
+
 </html>
