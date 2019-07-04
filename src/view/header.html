@@ -1,30 +1,55 @@
-<div >
-    <div  style="display:inline-block;position: absolute;left: 170px;">
-        <a href="index.html">
-            <img src="../images/logo_1.png" alt="">
-        </a>
-    </div>
-    <div hidden style="position:absolute;left:1250px;top: 22px;display:inline-block;"class="layui-breadcrumb" lay-separator="|"  >
-        <a hidden  href="login.html">登录</a>
-        <a hidden  href="register.html">注册</a>
-    </div>
-    <div style=" position:absolute;left:1250px;top: 22px;display:inline-block;"class="layui-breadcrumb" lay-separator="|" >
-        <a id="personal" href="">个人中心</a>
-        <a id="logout" href="">注销</a>
+<div class="list-main">
+
+    <div class="list-a-logo fl"><a href="index.html"><img src="../images/logo_1.png" alt=""></a></div>
+    <div style="position:absolute;left:1250px;top: 22px;display:inline-block;"class="layui-breadcrumb" lay-separator="|"  >
+        <a href="login.html">登录</a>
+        <a href="register.html">注册</a>
     </div>
 </div>
-<br><br><br><br>
-<!--导航栏-->
-<div style="float:left;left: 170px;position:absolute;top: 70px;">
-    <ul class="layui-nav layui-bg-cyan">
-        <li class="layui-nav-item"><a href="index.html">首页</a></li>
-        <li class="layui-nav-item"><a href="todo.html">工程报监</a></li>
-        <li class="layui-nav-item"><a href="todo.html">竣工备案</a></li>
-        <li class="layui-nav-item"><a href="todo.html">工程监督</a></li>
-        <li class="layui-nav-item"><a href="todo.html">资料管理</a></li>
-        <li class="layui-nav-item"><a href="todo.html">事故报告</a></li>
-        <li class="layui-nav-item"><a href="todo.html">费用管理</a></li>
-        <li class="layui-nav-item"><a href="todo.html">信息发布</a></li>
-        <li class="layui-nav-item" ><a href="todo.html">质量投诉</a></li>
-    </ul>
+<!--导航开始-->
+<div class="nav_a">
+    <div class="nav_b">
+        <div class="nav_c_index"><a href="index.html">首页</a></div>
+        <div class="nav_c_page">
+            <ul class="nav_d">
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >工程报监</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >竣工备案</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >工程监督</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >资料管理</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >事故报告</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >费用管理</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >信息发布</a>
+                </li>
+                <li class="nav_e_main">
+                    <a class="nav_f_title" href="todo.html" target="_self"  >质量投诉</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<!--导航结束-->
+<script>
+    layui.use('element', function(){
+        var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+        //监听导航点击
+        element.on('nav(demo)', function(elem){
+            //console.log(elem)
+            layer.msg(elem.text());
+        });
+    });
+</script>
 </div>
