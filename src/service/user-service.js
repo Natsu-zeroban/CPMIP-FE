@@ -1,21 +1,34 @@
-
-var _cpmip = require('../util/cpmip.js');
+// define(function(require, exports, module) {
+//     //  怎么做到的？
+//     var _cpmip = require('../util/cpmip.js');
+// });
 
 var _user = {
     // 用户登录
-    login : function(userInfo, resolve, reject){
+    userLogin : function(userInfo, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/login.do'),
+            url : _cpmip.getServerUrl('/com_user/login.do'),
             data : userInfo,
             method : 'POST',
             success : resolve,
             error : reject
         });
     },
+    //政府登录？
+    govLogin : function(userInfo, resolve, reject){
+        _cpmip.request({
+            url : _cpmip.getServerUrl('/gov_user/login.do'),
+            data : userInfo,
+            method : 'POST',
+            success : resolve,
+            error : reject
+        });
+    },
+
     // 检查用户名
     checkUsername : function(username, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/check_valid.do'),
+            url : _cpmip.getServerUrl('/com_user/check_valid.do'),
             data : {
                 str : username,
                 type : 'username'
@@ -28,7 +41,7 @@ var _user = {
     // 用户注册
     register : function(userInfo, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/register.do'),
+            url : _cpmip.getServerUrl('/com_user/register.do'),
             data : userInfo,
             method : 'POST',
             success : resolve,
@@ -38,7 +51,7 @@ var _user = {
     // 检查登录状态
     checkLogin : function(resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/get_user_info.do'),
+            url : _cpmip.getServerUrl('/com_user/get_user_info.do'),
             method : 'POST',
             success : resolve,
             error : reject
@@ -47,7 +60,7 @@ var _user = {
     // 获取用户密码提示问题
     getQuestion : function(username, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/forget_get_question.do'),
+            url : _cpmip.getServerUrl('/com_user/forget_get_question.do'),
             data : {
                 username : username
             },
@@ -59,7 +72,7 @@ var _user = {
     // 检查密码提示问题答案
     checkAnswer : function(userInfo, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/forget_check_answer.do'),
+            url : _cpmip.getServerUrl('/com_user/forget_check_answer.do'),
             data : userInfo,
             method : 'POST',
             success : resolve,
@@ -69,7 +82,7 @@ var _user = {
     // 重置密码
     resetPassword : function(userInfo, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/forget_reset_password.do'),
+            url : _cpmip.getServerUrl('/com_user/forget_reset_password.do'),
             data : userInfo,
             method : 'POST',
             success : resolve,
@@ -79,7 +92,7 @@ var _user = {
     // 获取用户信息
     getUserInfo : function(resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/get_user_info.do'),
+            url : _cpmip.getServerUrl('/com_user/get_user_info.do'),
             method : 'POST',
             success : resolve,
             error : reject
@@ -88,7 +101,7 @@ var _user = {
     // 更新个人信息
     updateUserInfo : function(userInfo, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/update_information.do'),
+            url : _cpmip.getServerUrl('/com_user/update_information.do'),
             data : userInfo,
             method : 'POST',
             success : resolve,
@@ -98,7 +111,7 @@ var _user = {
     // 登陆状态下更新密码
     updatePassword : function(userInfo, resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/reset_password.do'),
+            url : _cpmip.getServerUrl('/com_user/reset_password.do'),
             data : userInfo,
             method : 'POST',
             success : resolve,
@@ -108,11 +121,14 @@ var _user = {
     // 登出
     logout : function(resolve, reject){
         _cpmip.request({
-            url : _cpmip.getServerUrl('/user/logout.do'),
+            url : _cpmip.getServerUrl('/com_user/logout.do'),
             method : 'POST',
             success : resolve,
             error : reject
         });
+    },
+    test : function () {
+        console.log("aaa");
     }
-}
-module.exports = _user;
+};
+// module.exports = _user;
