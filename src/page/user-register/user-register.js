@@ -16,10 +16,10 @@ function s1next() {
     else if(userType==='建设单位'||userType==='施工单位'){
         alert("选中的用户角色类型是：" + userType);
         if(userType==='建设单位'){
-            registers1form.action="register2-s2.html?myRole="+0;
+            registers1form.action="com-register.html?myRole="+0;
         }
         if(userType==='施工单位'){
-            registers1form.action="register2-s2.html?myRole="+1;
+            registers1form.action="com-register.html?myRole="+1;
         }
     }
     else{
