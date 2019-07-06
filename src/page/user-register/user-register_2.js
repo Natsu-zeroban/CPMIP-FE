@@ -13,11 +13,10 @@ layui.use(['form', 'layedit', 'laydate'], function(){
         ,laydate = layui.laydate;
     //自定义验证规则
     form.verify({
-        companyName: function(value){
-            if(value.length < 3){
-                return '企业名称至少为3个字符';
-            }
-        }
+        companyName:[
+            /^[\u4E00-\u9FA5]{2,20}$/
+            ,'企业格式不规范！应该为2-20字中文格式'
+        ]
         ,companyEcotype:function (value) {
             if($('#companyEcotype').val()==="0"){
                 return '请选择经济类型！'
@@ -42,11 +41,11 @@ layui.use(['form', 'layedit', 'laydate'], function(){
                 return'请输入正确的17位统一社会信用代码'
             }
         }
-        ,personalName:function (value) {
-            if (value.length<1){
-                return'姓名不能为空'
-            }
-        }
+
+        ,personalName:[
+            /^[\u4E00-\u9FA5]{2,20}$/
+            ,'姓名格式不规范 请输入正确的中文姓名'
+        ]
         ,answer:function (value) {
             var q = $('#companyQuestion').val();
             var a = $('#companyAnswer').val();
@@ -58,14 +57,13 @@ layui.use(['form', 'layedit', 'laydate'], function(){
 
     //监听提交
     form.on('submit(demo1)', function(data){
-        var result;
-        var url=window.location.search; //获取url中"?"符后的字串
-        if(url.indexOf("?")!=-1){
-            result = url.substr(url.indexOf("=")+1)
+        var field = data.field;
+        if(!field.Agreement){
+            return layer.msg('你必须同意用户协议才能注册');
         }
         $.post("http://www.cpmip.cn/com_user/register.do",
             {
-                company:result,
+                company:location.search.match(new RegExp("[\?\&]myRole=([^\&]+)", "i"))[1],
                 ecotype:$('#companyEcotype').val(),
                 name:$.trim($('#companyName').val()),
                 password:$.trim($('#companyPassword').val()),

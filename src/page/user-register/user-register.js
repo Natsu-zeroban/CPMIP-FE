@@ -1,18 +1,25 @@
 function s1next() {
-    var a1 = $("input[name='role']:checked").val();
-    if(a1==='住建部门'||a1==='质量监督管理部门'){
-        // $("#government_dept").val()==a;
-        registers1form.action="register1-s2.html";
-    }
-    else if(a1==='建设单位'||a1==='施工单位'){
-        // $("#government_dept").val() ==a;
-        // $("#government_dept").placeholder==a;
-        alert("选中的用户角色类型是：" + a1);
-        if(a1==='建设单位'){
-            window.location.href="register2-s2.html?valus="+0;
+    var userType = $("input[name='role']:checked").val();
+    if(userType==='住建部门'||userType==='质量监督管理部门'){
+
+        if(userType==='住建部门'){
+            alert("选中的用户角色类型是：" + userType);
+            registers1form.action="gov-register.html?myRole="+0;
+
         }
-        if(a1==='施工单位'){
-            window.location.href="register2-s2.html?valus="+1;
+        else if(userType==='质量监督管理部门'){
+            alert("选中的用户角色类型是：" + userType);
+            registers1form.action="gov-register.html?myRole="+1;
+
+        }
+    }
+    else if(userType==='建设单位'||userType==='施工单位'){
+        alert("选中的用户角色类型是：" + userType);
+        if(userType==='建设单位'){
+            registers1form.action="register2-s2.html?myRole="+0;
+        }
+        if(userType==='施工单位'){
+            registers1form.action="register2-s2.html?myRole="+1;
         }
     }
     else{

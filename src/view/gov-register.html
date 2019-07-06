@@ -5,24 +5,20 @@
     <title>注册</title>
     <meta name="keywords" content="CPMIP注册">
     <meta name="description" content="住建部门和质量监督管理部门step2——填写用户详细信息">
-
     <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
     <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
     <link rel="stylesheet" href="../page/user-login/uers-login.css">
-    <script src="../page/commonJs/animation.js"></script>
 </head>
 <body>
 <script src="../../node_modules/layui-src/src/layui.js"></script>
 <script src="../page/commonJs/layui.js"></script>
 <script type="text/javascript" src="../page/commonJs/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../page/commonJs/jquery.min.js"></script>
-<script type="text/javascript" src="../page/user-register/user-register.js"></script>
-<script type="text/javascript" src="../page/commonJs/bootstrap.min.js"></script>
+<!--<script type="text/javascript" src="../page/commonJs/jquery.min.js"></script>-->
+<script type="text/javascript" src="../page/user-register/gov-register.js"></script>
 
 <div class="centerBox" style="position: center;width:670px;">
-    <!--<div class="centerBox" style="width:670px; height: 450px; border: 1px solid #c2c2c2" >-->
     <h1 style="text-align: center; margin-top: 10px">注 册</h1>
-    <form class="layui-form" action="">
+    <form class="layui-form" action="" id="govRegisterForm">
         <!--定义标题-->
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
             <legend>Step2:填写用户信息</legend>
@@ -31,36 +27,32 @@
         <div class="layui-form-item">
             <label class="layui-form-label">姓  名:</label>
             <div class="layui-input-block">
-                <input type="text" id="government_name" lay-verify="required" lay-reqtext="请输入姓名！" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                <input type="text" id="government_name" lay-verify="required|name" lay-reqtext="请输入姓名！" placeholder="请输入姓名" autocomplete="off" class="layui-input gov-register-form">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">手机号:</label>
             <div class="layui-input-block">
-                <input type="text" id="government_phone" lay-verify="required|phone|number" lay-reqtext="请输入手机号！" placeholder="请输入手机号" autocomplete="off" class="layui-input">
+                <input type="text" id="government_phone" lay-verify="required|phone|number" lay-reqtext="请输入手机号！" placeholder="请输入手机号" autocomplete="off" class="layui-input gov-register-form">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">部  门:</label>
             <div class="layui-input-block">
-                <select  lay-filter="aihao" lay-verify="required" lay-reqtext="请选择部门！" placeholder="请选择部门" id="government_dept">
-                    <option value=""></option>
-                    <option value="0">质量监督管理部门</option>
-                    <option value="1">住建部门</option>>
-                </select>
+                <input type="text" id="government_dept" lay-verify="required" lay-reqtext="请输入部门！" placeholder="请输入部门" autocomplete="off" class="layui-input gov-register-form" disabled="disabled">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">职  位:</label>
             <div class="layui-input-block">
-                <select  lay-filter="aihao" lay-verify="required" lay-reqtext="请选择职位！" placeholder="请选择职位" id="government_post">
+                <select  lay-filter="aihao" lay-verify="required" lay-reqtext="请选择职位！" placeholder="请选择职位" id="government_post" class="gov-register-form">
                     <option value=""></option>
-                    <option value="0">主任</option>
-                    <option value="1">副主任</option>
-                    <option value="2">职员</option>
+                    <option value="主任">主任</option>
+                    <option value="副主任">副主任</option>
+                    <option value="职员">职员</option>
                 </select>
             </div>
         </div>
@@ -68,50 +60,46 @@
         <div class="layui-form-item">
             <label class="layui-form-label">工  号:</label>
             <div class="layui-input-block">
-                <input type="text" id="government_num" lay-verify="required" lay-reqtext="请输入工号！" placeholder="请输入工号" autocomplete="off" class="layui-input">
+                <input type="text" id="government_jobId" lay-verify="required" lay-reqtext="请输入工号！" placeholder="请输入工号" autocomplete="off" class="layui-input gov-register-form">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">输入密码:</label>
             <div class="layui-input-inline" style="margin-left: 20px;min-height: 50px;">
-                <input type="password" id="government_password" lay-verify="required|password" lay-reqtext="请输入密码！" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                <input type="password" name="government_password" id="government_password" lay-verify="required|password" lay-reqtext="请输入密码！" placeholder="请输入密码" autocomplete="off" class="layui-input gov-register-form">
             </div>
             <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-            <!--<label class="layui-form-label">密  码:</label>-->
-            <!--<div class="layui-input-block">-->
-                <!--<input type="password" name="government_password" lay-verify="required" lay-reqtext="请输入密码" placeholder="请输入密码" autocomplete="off"  class="layui-input">-->
-            <!--</div>-->
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">确认密码:</label>
             <div class="layui-input-block">
-                <input type="password" id="government_passwordConfirm" lay-verify="required|passwordConfirm" lay-reqtext="请确认输入密码！" placeholder="请再次输入密码" autocomplete="off"  class="layui-input">
+                <input type="password" name="government_repass" id="government_passwordConfirm" lay-verify="required|passwordConfirm" lay-reqtext="请确认输入密码！" placeholder="请再次输入密码" autocomplete="off"  class="layui-input gov-register-form">
             </div>
         </div>
 
         <div class="layui-form-item">
             <label class="layui-form-label">密保问题:</label>
             <div class="layui-input-block">
-                <input type="text" id="government_question" placeholder="" autocomplete="off" class="layui-input">
+                <input type="text" id="government_question" placeholder="" autocomplete="off" class="layui-input gov-register-form">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">密保答案:</label>
             <div class="layui-input-block">
-                <input type="text" id="government_answer" placeholder="" autocomplete="off" class="layui-input">
+                <input type="text" id="government_answer" placeholder="" autocomplete="off" class="layui-input gov-register-form">
             </div>
         </div>
 
         <div class="layui-form-item" style="margin-left:40px;margin-top: 0px" >
-            <div class="layui-input-block" style="margin-left:40px;margin-top: 0px" >
-                <input type="checkbox" name="like1[write]" lay-skin="primary" style="margin-left:40px;margin-top: 0px" >我同意<a href="https://www.baidu.com/" target="_blank">注册协议</a>
+            <div class="layui-input-block checkbox i-checks" style="margin-left:40px;margin-top: 0px" >
+                <input type="checkbox" name="govRegAgreement" lay-skin="primary" style="margin-left:40px;margin-top: 0px" >我同意<a href="https://www.baidu.com/" target="_blank">注册协议</a>
             </div>
         </div>
         <div class="layui-form-item">
             <div class="layui-input-block">
-                <button class="layui-btn" lay-submit="" lay-filter="demo1" style="" id="register1">注  册</button>
+                <a class="layui-btn" lay-submit="" lay-filter="govReg" style="" id="govRegister" >注  册</a>
             </div>
         </div>
         <div class="layui-form-item">
@@ -119,6 +107,16 @@
                 <small id="loginSmall">已经有账户了？</small><a href="login.html">点此登录</a></p>
         </div>
     </form>
-</div>
+    </div>
+<script>
+    //公司部门
+    // alert(location.search.match(new RegExp("[\?\&]myRole=([^\&]+)", "i"))[1]);
+    if(location.search.match(new RegExp("[\?\&]myRole=([^\&]+)", "i"))[1]==="0"){
+        document.getElementById('government_dept').value='住建部门';
+    }
+    else if(location.search.match(new RegExp("[\?\&]myRole=([^\&]+)", "i"))[1]==="1"){
+        document.getElementById('government_dept').value='质量监督管理部门';
+    }
+</script>
 </body>
 </html>
