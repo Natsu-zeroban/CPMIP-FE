@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
-    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
+    <link rel="stylesheet" href="../page/index/layui/css/layui.css">
     <link rel="stylesheet" href="../page/user-login/uers-login.css">
     <!--<script src="../page/commonJs/animation.js"></script>-->
 
 </head>
 <body>
     <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
-    <script src="../../node_modules/layui-src/src/layui.js"></script>
+    <script src="../page/index/layui/layui.js"></script>
     <script src="../page/commonJs/layui.js"></script>
     <script src="../page/user-login/user-login.js"></script>
     <script>
@@ -22,11 +22,11 @@
         function postMyform(){
             $.post("http://www.cpmip.cn/com_user/login.do",
                 {
-                    username:"红丝绒建筑工程有限公司",
-                    password:"123456"
+                    username:"红丝绒建有限公司",
+                    password:"1256"
                 },
                 function(data,status){
-                    alert("数据: \n" + data + "\n状态: " + status);
+                    alert("数据: \n" + data.msg + "\n状态: " + data.status);
                 });
         }
     </script>
