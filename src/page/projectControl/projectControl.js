@@ -66,6 +66,7 @@ layui.use('table', function(){
                             if (_id === _delId) {
                                 cbList.splice(i, 1);//删除起始下标为i,长度为1的数据
 
+                                //这就是删除接口，其他建议复制
                                 $.ajax({
                                     url:'http://www.cpmip.cn/report/delete.do'
                                     ,method:"post"
@@ -77,7 +78,7 @@ layui.use('table', function(){
                                         console.log(data)
                                     }
                                 });
-                                //这里可以调用删除接口了
+
 
                                 //用户未登陆smjb
                                 break;
@@ -138,8 +139,6 @@ function tableSet() {
             // });
 
         }
-
-
     });
 }
 
@@ -147,21 +146,29 @@ function tableSet() {
 //代码没和tableSet复用，但没想到别的好方法
 function tableGet() {
     layer.open({
-        type: 1//Layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）,
-        , title: false //不显示标题栏
-        , closeBtn: false
-        , area: '300px;'     //area: ['390px', '330px'],   //宽高
-        , shade: 0.8         //遮罩透明度
-        , id: 'tableGet' //设定一个id，防止重复弹出
-        , btn: ['提交', '返回']
-        , btnAlign: 'c'
-        , moveType: 1 //拖拽模式，0或者1
-        ,content:''
+        type: 2, //类型，解析url
+        closeBtn: 1, //关闭按钮是否显示 1显示0不显示
+        title: '填写工程监督表', //页面标题
+        shadeClose: true, //点击遮罩区域是否关闭页面
+        shade: 0.8,  //遮罩透明度
+        area: ['900px', '700px'],  //弹出层页面比例
+        content:'projectControladd.html'
         ,success:function () {
             //塞满数据，用ajax之类的？没找到方便的全部动态插入方法
         }
         ,yes: function () {
             //写提交修改的接口
+            $.ajax({
+                url:'http://www.cpmip.cn/report/delete.do'
+                ,method:"post"
+                ,data:{id:_id}
+                ,xhrFields:{
+                    withCredentials:true
+                }
+                ,success:function(data){
+                    console.log(data)
+                }
+            });
         }
     });
 }
