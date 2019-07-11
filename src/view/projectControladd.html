@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工程监督</title>
+    <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
+    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
+    <link rel="stylesheet" href="../page/user-login/uers-login.css">
+</head>
+<body>
+<script src="../../node_modules/layui-src/src/layui.js"></script>
+<script src="../page/commonJs/layui.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery-2.1.1.min.js"></script>
+<!--<script type="text/javascript" src="../page/commonJs/jquery.min.js"></script>-->
+<script type="text/javascript" src="../page/projectControl/projeControladd.js"></script>
+
+<div class="centerBox" style="position: center;width:700px;">
+    <h1 style="text-align: center; margin-top: 10px">工程监督信息表</h1>
+    <form class="layui-form" action="" id="govRegisterForm">
+        <!--定义标题-->
+        <div class="layui-form-item">
+            <div class="layui-inline"style="width:800px">
+              <label class="layui-form-label">工程名称</label>
+              <div class="layui-input-inline">
+                <input type="text" name="reportConstruName"id="reportConstruName" lay-verify="Name"  placeholder="请输入工程名称"autocomplete="off" class="layui-input">
+              </div>
+              <label class="layui-form-label">工程规模</label>
+               <div class="layui-input-inline">
+                <input type="text" name="reportMoney"id="reportMoney"lay-verify="money"  placeholder="请输入工程规模(万元)"autocomplete="off" class="layui-input">
+               </div>
+            </div>
+             <div class="layui-inline"style="width:800px">
+                <label class="layui-form-label">工程地址</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="reportPosition" id="reportPosition"lay-verify="position" placeholder="请输入工程地址"autocomplete="off" class="layui-input">
+                </div>
+                <label class="layui-form-label">建筑面积</label>
+                 <div class="layui-input-inline">
+                  <input type="text" name="reportArea" id="reportArea" lay-verify="area" placeholder="请输入建筑面积(m^2)"autocomplete="off" class="layui-input">
+                 </div>
+              </div>
+          </div>
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                  <label class="layui-form-label">开工时间</label>
+                  <div class="layui-input-inline">
+                    <input type="text" name="reportTime" class="layui-input" id="test11" placeholder="年月日">
+                  </div>
+             </div>
+        </div>
+
+       <div class="layui-form-item">
+            <div class="layui-inline"style="width:800px">
+              <label class="layui-form-label">建设单位名称</label>
+              <div class="layui-input-inline">
+                <input type="text" name="reportBuildname" id="reportBuildname"lay-verify="Name"  placeholder="请输入单位名称"autocomplete="off" class="layui-input">
+              </div>
+              <label class="layui-form-label">法定代表人</label>
+               <div class="layui-input-inline">
+                <input type="text" name="eportBuilder" id="reportBuilder" lay-verify="pname"  placeholder="请输入代表人姓名"autocomplete="off" class="layui-input">
+               </div>
+            </div>
+             <div class="layui-inline"style="width:800px">
+                <label class="layui-form-label">联系方式</label>
+                <div class="layui-input-inline">
+                  <input type="tel" name="reportBuilderphone"id="reportBuilderphone"lay-verify="required|phone" placeholder="请输入手机号码"autocomplete="off" class="layui-input">
+                </div>
+        </div>
+        </div>
+               <div class="layui-form-item">
+                    <div class="layui-inline"style="width:800px">
+                      <label class="layui-form-label">施工单位名称</label>
+                      <div class="layui-input-inline">
+                        <input type="text" name="reportConstruction" id="reportConstruction"lay-verify="Name"  placeholder="请输入单位名称"autocomplete="off" class="layui-input">
+                      </div>
+                      <label class="layui-form-label">法定代表人</label>
+                       <div class="layui-input-inline">
+                        <input type="text" name="reportConstructioner" id="reportConstructioner"lay-verify="pname" placeholder="请输入代表人姓名"autocomplete="off" class="layui-input">
+                       </div>
+                    </div>
+                     <div class="layui-inline"style="width:800px">
+                        <label class="layui-form-label">联系方式</label>
+                        <div class="layui-input-inline">
+                          <input type="tel" name="reportConstructionerphone" id="reportConstructionerphone" lay-verify="required|phone" placeholder="请输入手机号码"autocomplete="off" class="layui-input">
+                        </div>
+                </div>
+                </div>
+       <div class="layui-form-item">
+            <div class="layui-inline"style="width:800px">
+              <label class="layui-form-label">质量检测机构单位名称</label>
+              <div class="layui-input-inline">
+                <input type="text" name="reportQsadname"id="reportQsadname" lay-verify="Name"  placeholder="请输入单位名称"autocomplete="off" class="layui-input">
+              </div>
+              <label class="layui-form-label">法定代表人</label>
+               <div class="layui-input-inline">
+                <input type="text" name="reportQsader" id="reportQsader" lay-verify="pname" placeholder="请输入代表人姓名"autocomplete="off" class="layui-input">
+               </div>
+            </div>
+             <div class="layui-inline"style="width:800px">
+                <label class="layui-form-label">联系方式</label>
+                <div class="layui-input-inline">
+                  <input type="tel" name="reportQsaderphone"  id="reportQsaderphone"lay-verify="required|phone" placeholder="请输入手机号码"autocomplete="off" class="layui-input">
+                </div>
+        </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">有关工程质量的法律、法规的执行情况</label>
+            <div class="layui-input-block">
+              <textarea placeholder="请如实填写" name="reportStandard1"id="reportStandard1"class="layui-textarea" lay-verify="table"></textarea>
+            </div>
+          </div>
+          <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">工程勘察、设计执行强制性标准情况</label>
+              <div class="layui-input-block">
+                <textarea placeholder="请如实填写" name="reportStandard2"id="reportStandard2" class="layui-textarea"lay-verify="table"></textarea>
+              </div>
+            </div>
+          <div class="layui-form-item layui-form-text">
+              <label class="layui-form-label">工程施工、监理执行强制性标准情况</label>
+              <div class="layui-input-block">
+                <textarea placeholder="请如实填写" name="reportStandard3"id="reportStandard3"class="layui-textarea"lay-verify="table"></textarea>
+              </div>
+            </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <a class="layui-btn" lay-submit="" lay-filter="govReg" style="" id="govRegister" >提交</a>
+                 <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+            </div>
+        </div>
+    </form>
+    </div>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //自定义格式
+  laydate.render({
+    elem: '#test11'
+    ,format: 'yyyy年MM月dd日'
+  });
+});
+</script>
+</body>
+</html>

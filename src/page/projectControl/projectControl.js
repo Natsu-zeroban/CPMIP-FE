@@ -120,22 +120,15 @@ layui.use('table', function(){
 //写出去是为了方便之后模块化，删除和修改也会做
 function tableSet() {
     layer.open({
-        type: 1//Layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）,
-        ,title: false //不显示标题栏
-        ,closeBtn: false
-        ,area: '300px;'     //area: ['390px', '330px'],   //宽高
-        ,shade: 0.8         //遮罩透明度
-        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
-        ,btn: ['提交', '返回']
-        ,btnAlign: 'c'
-        ,moveType: 1 //拖拽模式，0或者1
-        //示例
-        // ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +
-        //     '你知道吗？亲！<br>layer ≠ layui<br><br>layer只是作为Layui的一个弹层模块，由于其用户基数较大，所以常常会有人以为layui是layerui<br><br>' +
-        //     'layer虽然已被 Layui 收编为内置的弹层模块，但仍然会作为一个独立组件全力维护、升级。<br><br>我们此后的征途是星辰大海 ^_^</div>'
-
+        type: 2, //类型，解析url
+        closeBtn: 1, //关闭按钮是否显示 1显示0不显示
+        title: '填写工程监督表', //页面标题
+        shadeClose: true, //点击遮罩区域是否关闭页面
+        shade: 0.8,  //遮罩透明度
+        area: ['900px', '700px'],  //弹出层页面比例
+        content:'projectControladd.html'
         //这里手写表单，表单好像没有既定模块，只能纯手撸了
-        ,content: '<div><table id="templateTable"></table></div>'
+        // ,content: '<div><table id="templateTable"></table></div>'
         ,success: function(layero){
             //加载成功显示点啥好？
             var btn = layero.find('.layui-layer-btn');
@@ -145,18 +138,7 @@ function tableSet() {
             // });
 
         }
-        //这个是指第一个按钮按下去成功的事件
-        ,yes: function () {
-            //传表单数据过去
-            $.post("http://www.cpmip.cn/com_user/login.do",
-                {
-                    username:"红丝绒建筑工程有限公司",
-                    password:"123456"
-                },
-                function(data,status){
-                    alert("数据: \n" + data.msg + "\n状态: " + data.status);
-                });
-        }
+
 
     });
 }
