@@ -66,6 +66,7 @@ layui.use('table', function(){
                             if (_id === _delId) {
                                 cbList.splice(i, 1);//删除起始下标为i,长度为1的数据
 
+                                //这就是删除接口，其他建议复制
                                 $.ajax({
                                     url:'http://www.cpmip.cn/report/delete.do'
                                     ,method:"post"
@@ -77,7 +78,7 @@ layui.use('table', function(){
                                         console.log(data)
                                     }
                                 });
-                                //这里可以调用删除接口了
+
 
                                 //用户未登陆smjb
                                 break;
@@ -148,14 +149,19 @@ function tableSet() {
         //这个是指第一个按钮按下去成功的事件
         ,yes: function () {
             //传表单数据过去
-            $.post("http://www.cpmip.cn/com_user/login.do",
-                {
-                    username:"红丝绒建筑工程有限公司",
-                    password:"123456"
-                },
-                function(data,status){
-                    alert("数据: \n" + data.msg + "\n状态: " + data.status);
-                });
+            $.ajax({
+                url:'http://www.cpmip.cn/report/add.do'
+                ,method:"post"
+                ,data:{
+
+                }
+                ,xhrFields:{
+                    withCredentials:true
+                }
+                ,success:function(data){
+                    console.log(data)
+                }
+            });
         }
 
     });
@@ -180,6 +186,17 @@ function tableGet() {
         }
         ,yes: function () {
             //写提交修改的接口
+            $.ajax({
+                url:'http://www.cpmip.cn/report/delete.do'
+                ,method:"post"
+                ,data:{id:_id}
+                ,xhrFields:{
+                    withCredentials:true
+                }
+                ,success:function(data){
+                    console.log(data)
+                }
+            });
         }
     });
 }
