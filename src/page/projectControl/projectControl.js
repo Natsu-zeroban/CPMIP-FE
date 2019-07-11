@@ -1,3 +1,5 @@
+
+
 layui.use('table', function(){
     var table = layui.table;
 
@@ -63,16 +65,20 @@ layui.use('table', function(){
                             var _id = cbList[i].id;         //判断当前循环id是否被选中
                             if (_id === _delId) {
                                 cbList.splice(i, 1);//删除起始下标为i,长度为1的数据
-                                // $.post("http://www.cpmip.cn/com_user/login.do",
-                                //     {
-                                //         username:"红丝绒建筑工程有限公司",
-                                //         password:"123456"
-                                //     },
-                                //     function(data,status){
-                                //         alert("数据: \n" + data.msg + "\n状态: " + data.status);
-                                //     });
 
+                                $.ajax({
+                                    url:'http://www.cpmip.cn/report/delete.do'
+                                    ,method:"post"
+                                    ,data:{id:_id}
+                                    ,xhrFields:{
+                                        withCredentials:true
+                                    }
+                                    ,success:function(data){
+                                        console.log(data)
+                                    }
+                                });
                                 //这里可以调用删除接口了
+
                                 //用户未登陆smjb
                                 break;
                             }
