@@ -60,31 +60,31 @@ layui.use('table', function(){
 
                     layer.confirm('是否确定删除？',function () {
 
-                    for (var k = 0; k < checkStatus.data.length; k++) {
-                        var _delId = checkStatus.data[k].id;        //选中的数据id
-                        for (var i = 0; i < cbList.length; i++) {
-                            var _id = cbList[i].id;         //判断当前循环id是否被选中
-                            if (_id === _delId) {
-                                cbList.splice(i, 1);//删除起始下标为i,长度为1的数据
-                                //这就是删除接口，其他建议复制
-                                $.ajax({
-                                    url:'http://www.cpmip.cn/report/delete.do'
-                                    ,method:"post"
-                                    ,data:{id:_id}
-                                    ,xhrFields:{
-                                        withCredentials:true
-                                    }
-                                    ,success:function(data){
-                                        console.log(data)
-                                    }
-                                });
-                                //用户未登陆smjb
-                                break;
+                        for (var k = 0; k < checkStatus.data.length; k++) {
+                            var _delId = checkStatus.data[k].id;        //选中的数据id
+                            for (var i = 0; i < cbList.length; i++) {
+                                var _id = cbList[i].id;         //判断当前循环id是否被选中
+                                if (_id === _delId) {
+                                    cbList.splice(i, 1);//删除起始下标为i,长度为1的数据
+                                    //这就是删除接口，其他建议复制
+                                    $.ajax({
+                                        url:'http://www.cpmip.cn/report/delete.do'
+                                        ,method:"post"
+                                        ,data:{id:_id}
+                                        ,xhrFields:{
+                                            withCredentials:true
+                                        }
+                                        ,success:function(data){
+                                            console.log(data)
+                                        }
+                                    });
+                                    //用户未登陆smjb
+                                    break;
+                                }
                             }
                         }
-                    }
-                    layer.msg("删除成功", {time: 1200}, function () {
-                        table.reload("test", {
+                        layer.msg("删除成功", {time: 1200}, function () {
+                            table.reload("test", {
                                 data: cbList
                             })
                         });
@@ -100,7 +100,7 @@ layui.use('table', function(){
                     tableGet(checkStatus);
 
                 }
-                    break;
+                break;
         }
     });
 

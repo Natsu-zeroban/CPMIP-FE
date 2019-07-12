@@ -45,65 +45,65 @@ layui.use(['form', 'layedit', 'laydate'], function(){
     //提交form
     // form.on('submit(govReg)', function(data) {
     //     var field = data.field;
-        // $.post("http://www.cpmip.cn/report/add.do", {
-        //         construname: $.trim($('#reportConstruName').val()),
-        //         position: $.trim($('#reportPosition').val()),
-        //         money: $.trim($('#reportMoney').val()),
-        //         area: $.trim($('#reportArea').val()),
-        //         report_time: $.trim($('#reportTime').val()),
-        //         buildname: $.trim($('#reportBuildname').val()),
-        //         builder: $.trim($('#reportBuilder').val()),
-        //         builder_phone: $.trim($('#reportBuilderphone').val()),
-        //         construction: $.trim($('#reportConstruction').val()),
-        //         constructioner: $.trim($('#reportConstructioner').val()),
-        //         constructioner_phone: $.trim($('#reportConstructionerphone').val()),
-        //         qsader: $.trim($('#reportQsader').val()),
-        //         qsadname: $.trim($('#reportQsadname').val()),
-        //         qsader_phone: $.trim($('#reportQsaderphone').val()),
-        //         standard1: $.trim($('#reportStandard1').val()),
-        //         standard2: $.trim($('#reportStandard2').val()),
-        //         standard3: $.trim($('#reportStandard3').val())
-        //
-        //     },
-        //     function (data, status) {
-        //         if (data.status) {
-        //             alert(data.msg)
-        //         }
-        //         else {
-        //             alert(data.msg);
-        //             $('#loginSmall').text("提交成功");
-        //             // window.location.href = "login.html";
-        //         }
-        //     })
-        // $.ajax({
-        //     url:'http://www.cpmip.cn/report/add.do'
-        //     ,method:"post"
-        //     ,data:{
-        //         construname: $.trim($('#reportConstruName').val()),
-        //         position: $.trim($('#reportPosition').val()),
-        //         money: $.trim($('#reportMoney').val()),
-        //         area: $.trim($('#reportArea').val()),
-        //         reportTime: '2017-03-01 08:14:10',
-        //         buildname: $.trim($('#reportBuildname').val()),
-        //         builder: $.trim($('#reportBuilder').val()),
-        //         builderPhone: $.trim($('#reportBuilderphone').val()),
-        //         construction: $.trim($('#reportConstruction').val()),
-        //         constructioner: $.trim($('#reportConstructioner').val()),
-        //         constructionerPhone: $.trim($('#reportConstructionerphone').val()),
-        //         qsader: $.trim($('#reportQsader').val()),
-        //         qsadname: $.trim($('#reportQsadname').val()),
-        //         qsaderPhone: $.trim($('#reportQsaderphone').val()),
-        //         standard1: $.trim($('#reportStandard1').val()),
-        //         standard2: $.trim($('#reportStandard2').val()),
-        //         standard3: $.trim($('#reportStandard3').val())
-        //     }
-        //     ,xhrFields:{
-        //         withCredentials:true
-        //     }
-        //     ,success:function(data){
-        //         console.log(data)
-        //     }
-        // });
+    // $.post("http://www.cpmip.cn/report/add.do", {
+    //         construname: $.trim($('#reportConstruName').val()),
+    //         position: $.trim($('#reportPosition').val()),
+    //         money: $.trim($('#reportMoney').val()),
+    //         area: $.trim($('#reportArea').val()),
+    //         report_time: $.trim($('#reportTime').val()),
+    //         buildname: $.trim($('#reportBuildname').val()),
+    //         builder: $.trim($('#reportBuilder').val()),
+    //         builder_phone: $.trim($('#reportBuilderphone').val()),
+    //         construction: $.trim($('#reportConstruction').val()),
+    //         constructioner: $.trim($('#reportConstructioner').val()),
+    //         constructioner_phone: $.trim($('#reportConstructionerphone').val()),
+    //         qsader: $.trim($('#reportQsader').val()),
+    //         qsadname: $.trim($('#reportQsadname').val()),
+    //         qsader_phone: $.trim($('#reportQsaderphone').val()),
+    //         standard1: $.trim($('#reportStandard1').val()),
+    //         standard2: $.trim($('#reportStandard2').val()),
+    //         standard3: $.trim($('#reportStandard3').val())
+    //
+    //     },
+    //     function (data, status) {
+    //         if (data.status) {
+    //             alert(data.msg)
+    //         }
+    //         else {
+    //             alert(data.msg);
+    //             $('#loginSmall').text("提交成功");
+    //             // window.location.href = "login.html";
+    //         }
+    //     })
+    // $.ajax({
+    //     url:'http://www.cpmip.cn/report/add.do'
+    //     ,method:"post"
+    //     ,data:{
+    //         construname: $.trim($('#reportConstruName').val()),
+    //         position: $.trim($('#reportPosition').val()),
+    //         money: $.trim($('#reportMoney').val()),
+    //         area: $.trim($('#reportArea').val()),
+    //         reportTime: '2017-03-01 08:14:10',
+    //         buildname: $.trim($('#reportBuildname').val()),
+    //         builder: $.trim($('#reportBuilder').val()),
+    //         builderPhone: $.trim($('#reportBuilderphone').val()),
+    //         construction: $.trim($('#reportConstruction').val()),
+    //         constructioner: $.trim($('#reportConstructioner').val()),
+    //         constructionerPhone: $.trim($('#reportConstructionerphone').val()),
+    //         qsader: $.trim($('#reportQsader').val()),
+    //         qsadname: $.trim($('#reportQsadname').val()),
+    //         qsaderPhone: $.trim($('#reportQsaderphone').val()),
+    //         standard1: $.trim($('#reportStandard1').val()),
+    //         standard2: $.trim($('#reportStandard2').val()),
+    //         standard3: $.trim($('#reportStandard3').val())
+    //     }
+    //     ,xhrFields:{
+    //         withCredentials:true
+    //     }
+    //     ,success:function(data){
+    //         console.log(data)
+    //     }
+    // });
 
 
 
