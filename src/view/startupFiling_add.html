@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
+    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
+    <link rel="stylesheet" href="../page/user-login/uers-login.css">
+    <style>
+        .layui-form-label {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<script src="../../node_modules/layui-src/src/layui.js"></script>
+<script src="../page/commonJs/layui.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<div class="centerBox" style="position: center;width:670px;">
+    <h1 style="text-align: center; margin-top: 10px">新增工程报监报告</h1>
+    <form class="layui-form" action="" id="">
+        <!--定义标题-->
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+            <legend>新增工程报监报告：</legend>
+        </fieldset>
+        <!--新增工程报监报告-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程名称:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_construname" lay-verify="required" lay-reqtext="请输入工程名称！"
+                       placeholder="请输入工程名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程地点:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_position" lay-verify="required" lay-reqtext="请输入工程地点！"
+                       placeholder="请输入工程地点" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程类型:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_type" lay-verify="required" lay-reqtext="请输入工程类型！"
+                       placeholder="请输入工程类型" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程面积:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_area" lay-verify="required|number" lay-reqtext="请输入工程面积！"
+                       placeholder="请输入工程面积" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程造价:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_money" lay-verify="required|number" lay-reqtext="请输入工程造价！"
+                       placeholder="请输入工程造价" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">开工时间：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="start_startTime" lay-reqtext="请输入开工时间！" lay-verify="reporttime" placeholder="格式：yyyy-MM-dd HH:mm:ss 例子：2019-06-27 11:09:15" style="width: 500px;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">计划竣工时间：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="start_finalTime" lay-reqtext="请输入计划竣工时间！" lay-verify="reporttime" placeholder="格式：yyyy-MM-dd HH:mm:ss 例子：2019-06-27 11:09:15" style="width: 500px;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">建设单位:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_builder" lay-verify="required" lay-reqtext="请输入建设单位名称！"
+                       placeholder="请输入建设单位名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">建设单位联系人姓名:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_buildername" lay-verify="required|name" lay-reqtext="请输入建设单位联系人姓名！" placeholder="请输入建设单位联系人姓名" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">建设单位联系人手机号:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_builderPhone" lay-verify="required|phone|number" lay-reqtext="请输入建设单位联系人手机号！" placeholder="请输入建设单位联系人手机号" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">施工单位:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_construction" lay-verify="required" lay-reqtext="请输入施工单位名称！"
+                       placeholder="请输入施工单位名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">施工单位联系人姓名:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_constructioner" lay-verify="required|name" lay-reqtext="请输入施工单位联系人姓名！" placeholder="请输入施工单位联系人姓名" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">施工单位联系人手机号:</label>
+            <div class="layui-input-block">
+                <input type="text" id="start_constructionerPhone" lay-verify="required|phone|number" lay-reqtext="请输入施工单位联系人手机号！" placeholder="请输入施工单位联系人手机号" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">报告时间：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="start_submitTime" lay-reqtext="请输入报告时间！" lay-verify="reporttime" placeholder="格式：yyyy-MM-dd HH:mm:ss 例子：2019-06-27 11:09:15" style="width: 500px;">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <a class="layui-btn" lay-submit="" lay-filter="startupFilingSubmit" style="">提 交</a>
+                <button type="reset" class="layui-btn layui-btn-primary">重 置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+        laydate.render({
+            elem: '#test11'
+            ,format: 'yyyy年MM月dd日'
+        });
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+        form.verify({
+            name:[
+                /^[\u4E00-\u9FA5]{2,4}$/
+                ,'姓名格式不规范！'
+            ]
+        });
+        form.render();
+
+        //提交form
+        form.on('submit(startupFilingSubmit)', function (data) {
+            var field = data.field;
+            $.ajax({
+                url:'http://www.cpmip.cn/start/add.do'
+                ,method:"post"
+                ,data:{
+                    construname: $.trim($('#start_construname').val()),
+                    position: $.trim($('#start_position').val()),
+                    area: $.trim($('#start_area').val()),
+                    type: $.trim($('#start_type').val()),
+                    money: $.trim($('#start_money').val()),
+                    startTime: $.trim($('#start_startTime').val()),
+                    finalTime: $.trim($('#start_finalTime').val()),
+                    builder: $.trim($('#start_builder').val()),
+                    buildername: $.trim($('#start_buildername').val()),
+                    builderPhone: $.trim($('#start_builderPhone').val()),
+                    construction: $.trim($('#start_construction').val()),
+                    constructioner: $.trim($('#start_constructioner').val()),
+                    constructionerPhone: $.trim($('#start_constructionerPhone').val()),
+                    submitTime: $.trim($('#start_submitTime').val()),
+                }
+                ,xhrFields:{
+                    withCredentials:true
+                }
+
+            });
+            layer.msg("提交成功！", {time: 1200}, function () {
+                window.location.href = "close.html";
+            });
+        })
+    });
+</script>
+</body>
+</html>

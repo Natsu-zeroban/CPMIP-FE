@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
+    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
+    <link rel="stylesheet" href="../page/user-login/uers-login.css">
+    <style>
+        .layui-form-label {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<script src="../../node_modules/layui-src/src/layui.js"></script>
+<script src="../page/commonJs/layui.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="../page/safetyAccidentReport/safetyAccidentReport_add.js"></script>
+<div class="centerBox" style="position: center;width:670px;">
+    <h1 style="text-align: center; margin-top: 10px">新增安全事故报告</h1>
+    <form class="layui-form" action="" id="">
+        <!--定义标题-->
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+            <legend>新增安全事故报告：</legend>
+        </fieldset>
+        <!--新增安全事故报告-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程名称:</label>
+            <div class="layui-input-block">
+                <input type="text" id="safetyAR_construname" lay-verify="required" lay-reqtext="请输入工程名称！"
+                       placeholder="请输入工程名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">施工单位:</label>
+            <div class="layui-input-block">
+                <input type="text" id="safetyAR_construction" lay-verify="required" lay-reqtext="请输入施工单位名称！"
+                       placeholder="请输入施工单位名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">建设单位:</label>
+            <div class="layui-input-block">
+                <input type="text" id="safetyAR_build" lay-verify="required" lay-reqtext="请输入建设单位名称！"
+                       placeholder="请输入建设单位名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">事故发生时间：</label>
+            <div class="layui-input-block">
+                <input type="text" name="date" id="safetyAR_happenTime" placeholder="格式：yyyy-MM-dd HH:mm:ss"
+                       lay-reqtext="请输入事故发生时间！" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">事故上报时间：</label>
+            <div class="layui-input-block">
+                <input type="text" name="date" id="safetyAR_reportTime"  placeholder="格式：yyyy-MM-dd HH:mm:ss"
+                       lay-reqtext="请输入事故发生时间！" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">事故发生地点:</label>
+            <div class="layui-input-block">
+                <input type="text" id="safetyAR_position" lay-verify="required" lay-reqtext="请输入事故发生地点！"
+                       placeholder="请输入事故发生地点" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">事故起因经过结果分析：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" lay-reqtext="请输入内容" id="safetyAR_reason"
+                          class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">事故发生后采取的措施：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" lay-reqtext="请输入内容" id="safetyAR_action"
+                          class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+                <a class="layui-btn" lay-submit="" lay-filter="safetyARSubmit" id="safetyARSubmit"style="">提 交</a>
+                <button type="reset" class="layui-btn layui-btn-primary">重 置</button>
+                </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>CPMIP</title>-->
+    <!--<meta name="keywords" content="工程报监（开工备案）">-->
+    <!--<meta name="description" content="工程报监（开工备案）—信息显示界面">-->
+    <!--<link rel="stylesheet" href="../page/commonStyle/commonCss.css">-->
+    <!--<link rel="stylesheet" href="../page/index/layui/css/layui.css"  media="all">-->
+    <!--<link rel="stylesheet" href="../page/index/index.css">-->
+    <!--</head>-->
+<!--<body>-->
+<!--<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>-->
+<!--<script src="../page/index/layui/layui.js" charset="utf-8"></script>-->
+<!--&lt;!&ndash;顶部 logo 登录&ndash;&gt;-->
+<!--<div id="header" class="list-top"></div>-->
+<!--&lt;!&ndash;页面内容&ndash;&gt;-->
+<!--<div id="content" class="list-main-content over-hidden" style="padding-top: 40px;margin-bottom: 75px" ></div>-->
+<!--&lt;!&ndash;页面尾部&ndash;&gt;-->
+<!--<div id="footer" class="footer-a"></div>-->
+
+<!--<script>-->
+    <!--$("#header").load("header.html")-->
+    <!--$("#footer").load("footer.html")-->
+    <!--//if()-->
+    <!--$("#content").load("content.html")-->
+    <!--// $("#personal").onclick(function (){-->
+    <!--//     $("#content").load("personal.html");-->
+    <!--// })-->
+<!--</script>-->
+
+<!--</body>-->
+
+<!--</html>-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CPMIP</title>
+    <meta name="keywords" content="工程报监（开工备案）">
+    <meta name="description" content="工程报监（开工备案）—信息显示界面">
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../../lib/html5.js"></script>
+    <script type="text/javascript" src="../../../lib/respond.min.js"></script>
+    <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+    <![endif]-->
+    <link href="../../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+    <link href="../../../lib/Hui-iconfont/1.0.1/iconfont.css" rel="stylesheet" type="text/css" />
+    <link href="../../../css/style.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+</head>
+<body>
+<header class="Hui-header cl" style="background-color:rgb(200, 22, 35);color: white">
+    <a class="Hui-logo l" href="../index.html" style="color: white"><i class="Hui-iconfont">&#xe625;</i>  建筑工程质量监管信息化平台</a><span class="Hui-subtitle l">CPMIP</span>
+    <ul class="Hui-userbar" style="color: white">
+        <li>欢 迎 您 ！</li>
+        <li class="dropDown dropDown_hover"><a href="#" class="dropDown_A" style="color: white"><b><i class="Hui-iconfont">&#xe62d;</i>  admin</b><i class="Hui-iconfont">&#xe6d5;</i></a>
+            <ul class="dropDown-menu radius box-shadow">
+                <li><a href="#">个人信息</a></li>
+                <li><a href="#">切换账户</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </li>
+        <li id="Hui-msg" style="color: white">
+            <a href="#" title="消息">
+                <span class="badge badge-danger" style="color: white">1</span>
+                <i class="Hui-iconfont" style="font-size:18px;color: white">&#xe68a;</i>
+            </a>
+        </li>
+    </ul>
+</header>
+<aside class="Hui-aside">
+    <input runat="server" id="divScrollValue" type="hidden" value="" />
+    <div class="menu_dropdown bk_2">
+        <dl id="menu-article">
+            <dt><i class="Hui-iconfont">&#xe687;</i> 工程报监<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="article-list.html" href="javascript:void(0)">查看工程报监</a></li>
+                    <li><a _href="article-list.html" href="javascript:void(0)">新增工程报监</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-picture">
+            <dt><i class="Hui-iconfont">&#xe637;</i> 竣工备案<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="picture-list.html" href="javascript:void(0)">查看竣工备案</a></li>
+                    <li><a _href="picture-list.html" href="javascript:void(0)">新增竣工备案</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-product">
+            <dt><i class="Hui-iconfont">&#xe692;</i> 工程监督<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="product-brand.html" href="javascript:void(0)">查看工程监督报告</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-page">
+            <dt><i class="Hui-iconfont">&#xe691;</i> 事故报告<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="page-home.html" href="javascript:void(0)">查看事故报告</a></li>
+                    <li><a _href="page-flinks.html" href="javascript:void(0)">新增质量事故报告</a></li>
+                    <li><a _href="page-flinks.html" href="javascript:void(0)">新增安全事故报告</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-comments">
+            <dt><i class="Hui-iconfont">&#xe64b;</i> 质量投诉<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="http://h-ui.duoshuo.com/admin/" href="javascript:;">查看质量投诉</a></li>
+                    <!--<li><a _href="feedback-list.html" href="javascript:void(0)"></a></li>-->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-order">
+            <dt><i class="Hui-iconfont">&#xe63a;</i> 财务管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="order-list.html" href="javascript:void(0)">工资管理</a></li>
+                    <li><a _href="recharge-list.html" href="javascript:void(0)">其他财务管理</a></li>
+                    <li><a _href="invoice-list.html" href="javascript:void(0)">发票管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-member">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 信息发布<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="member-list.html" href="javascript:;">发布信息</a></li>
+                    <!--<li><a _href="member-del.html" href="javascript:;">删除的会员</a></li>-->
+                    <!--<li><a _href="member-level.html" href="javascript:;">等级管理</a></li>-->
+                    <!--<li><a _href="member-scoreoperation.html" href="javascript:;">积分管理</a></li>-->
+                    <!--<li><a _href="member-record-browse.html" href="javascript:void(0)">浏览记录</a></li>-->
+                    <!--<li><a _href="member-record-download.html" href="javascript:void(0)">下载记录</a></li>-->
+                    <!--<li><a _href="member-record-share.html" href="javascript:void(0)">分享记录</a></li>-->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-tongji">
+            <dt><i class="Hui-iconfont">&#xe61e;</i> 统计报表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="charts-1.html" href="javascript:void(0)">周进度统计</a></li>
+                    <li><a _href="charts-2.html" href="javascript:void(0)">月进度统计</a></li>
+                    <li><a _href="charts-3.html" href="javascript:void(0)">季度进度统计</a></li>
+                    <li><a _href="charts-4.html" href="javascript:void(0)">年周期进度统计</a></li>
+                    <li><a _href="charts-5.html" href="javascript:void(0)">年度考评</a></li>
+                    <!--<li><a _href="charts-6.html" href="javascript:void(0)">3D柱状图</a></li>-->
+                    <!--<li><a _href="charts-7.html" href="javascript:void(0)">3D饼状图</a></li>-->
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-system">
+            <dt><i class="Hui-iconfont">&#xe639;</i> 资料管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="system-base.html" href="javascript:void(0)">系统设置</a></li>
+                    <li><a _href="system-category.html" href="javascript:void(0)">资料管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-admin">
+            <dt><i class="Hui-iconfont">&#xe643;</i> 人员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a _href="admin-role.html" href="javascript:void(0)">人员管理</a></li>
+                    <li><a _href="admin-permission.html" href="javascript:void(0)">权限管理</a></li>
+                    <li><a _href="admin-list.html" href="javascript:void(0)">管理员列表</a></li>
+                    <li><a _href="system-log.html" href="javascript:void(0)">系统日志</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</aside>
+<div class="dislpayArrow"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<section class="Hui-article-box">
+    <div id="Hui-tabNav" class="Hui-tabNav">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active"><span title="我的桌面" data-href="welcome.html">我的桌面</span><em></em></li>
+            </ul>
+        </div>
+        <div class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+        <div class="show_iframe">
+            <div style="display:none"  class="loading"></div>
+            <iframe scrolling="yes" frameborder="0" src="../welcome.html"></iframe>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="../../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../../lib/layer/1.9.3/layer.js"></script>
+<script type="text/javascript" src="../../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../../js/H-ui.admin.js"></script>
+
+<script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s)})();
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

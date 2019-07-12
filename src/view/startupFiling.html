@@ -10,10 +10,9 @@
     <link rel="stylesheet" href="../page/index/layui/css/layui.css"  media="all">
     <link rel="stylesheet" href="../page/index/index.css">
 
-
 </head>
 <body>
-<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
 <script src="../page/index/layui/layui.js" charset="utf-8"></script>
 <script src="../page/commonJs/layui.js"></script>
 <!--顶部 logo 登录-->
@@ -21,18 +20,10 @@
 
 
 <!--页面内容-->
-<div>
 <table class="layui-table layui-hide centerBox"  lay-filter="test" id="test"></table>
-</div>
+
 <!--工具栏模板：-->
 <script type="text/html" id="toolbarProjCont">
-    <div class="demoTable"style="width:420px;float: right;">
-        搜索ID：
-        <div class="layui-inline">
-            <input class="layui-input" name="id" id="searchReload" autocomplete="off">
-        </div>
-        <button class="layui-btn layui-btn-sm" lay-event="search">搜索</button>
-    </div>
     <div class="layui-btn-container">
         <button data-method="notice" class="layui-btn layui-btn-sm" lay-event="add">添加</button>
         <button class="layui-btn layui-btn-sm" lay-event="delete">删除</button>
@@ -40,8 +31,7 @@
     </div>
 </script>
 
-
-<script src="../page/projectControl/projectControl.js"></script>
+<script src="../page/startupFiling/startupFiling.js"></script>
 
 <!--将表格居中，放在渲染的script完成之后，实在没想到别的方法-->
 <style>
@@ -51,16 +41,16 @@
     }
 </style>
 
+
 <!--页面尾部-->
-<div id="footer" class="footer-a"></div>
+<!--<div id="footer" class="footer-a"></div>-->
 
 <script>
-    $("#header").load("header.html");
-    $("#footer").load("footer.html");
+    $("#header").load("header.html")
+    $("#footer").load("footer.html")
     //if()
 
 </script>
-
 <!--头尾都是测试用的-->
 </body>
 </html>

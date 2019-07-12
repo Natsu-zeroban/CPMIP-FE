@@ -22,17 +22,10 @@
 
 <!--页面内容-->
 <div>
-<table class="layui-table layui-hide centerBox"  lay-filter="test" id="test"></table>
+    <table class="layui-table layui-hide centerBox"  lay-filter="test" id="test"></table>
 </div>
 <!--工具栏模板：-->
 <script type="text/html" id="toolbarProjCont">
-    <div class="demoTable"style="width:420px;float: right;">
-        搜索ID：
-        <div class="layui-inline">
-            <input class="layui-input" name="id" id="searchReload" autocomplete="off">
-        </div>
-        <button class="layui-btn layui-btn-sm" lay-event="search">搜索</button>
-    </div>
     <div class="layui-btn-container">
         <button data-method="notice" class="layui-btn layui-btn-sm" lay-event="add">添加</button>
         <button class="layui-btn layui-btn-sm" lay-event="delete">删除</button>
@@ -41,7 +34,7 @@
 </script>
 
 
-<script src="../page/projectControl/projectControl.js"></script>
+<script src="../page/article/article.js"></script>
 
 <!--将表格居中，放在渲染的script完成之后，实在没想到别的方法-->
 <style>

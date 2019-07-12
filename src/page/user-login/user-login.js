@@ -192,14 +192,14 @@ var page = {
             // console.log(val);
             if (val == 0 || val == 1) {
                 _user.userLogin(formData, function (res) {
-                    window.location.href = _cpmip.getUrlParam('redirect') || './index.html';
+                    window.location.href = _cpmip.getUrlParam('redirect') || './index_.html';
                 }, function (errMsg) {
                     formError.show(errMsg);
                 })
             }
             else if(val == 2 || val == 3){
                 _user.govLogin(formGovData, function (res) {
-                    window.location.href = _cpmip.getUrlParam('redirect') || './index.html';
+                    window.location.href = _cpmip.getUrlParam('redirect') || './index_.html';
                 }, function (errMsg) {
                     formError.show(errMsg);
                 })

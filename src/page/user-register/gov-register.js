@@ -29,7 +29,7 @@ layui.use(['form', 'layedit', 'laydate'], function(){
         });
     form.render();
     //提交form
-    form.on('submit(govReg)', function(data) {
+    form.on('submit(governReg)', function(data) {
         var field = data.field;
 
         //确认密码
@@ -43,12 +43,12 @@ layui.use(['form', 'layedit', 'laydate'], function(){
         }
 
         $.post("http://www.cpmip.cn/gov_user/register.do", {
-            jobId: $.trim($('#government_jobId').val()),
-            name: $.trim($('#government_name').val()),
-            phone: $.trim($('#government_phone').val()),
-            dept: $.trim($('#government_dept').val()),
-            post: $.trim($('#government_post').val()),
-            password: $.trim($('#government_password').val())
+            jobId:$.trim($('#government_jobId').val()),
+                name: $.trim($('#government_name').val()),
+                phone: $.trim($('#government_phone').val()),
+                dept:location.search.match(new RegExp("[\?\&]myRole=([^\&]+)", "i"))[1],
+                post: $.trim($('#government_post').val()),
+                password: $.trim($('#government_password').val())
         },
         function (data, status) {
             if (data.status) {

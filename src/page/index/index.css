@@ -36,6 +36,12 @@ body a{
 
 }
 
+
+a.nav_f_title:hover{
+    color:#aaaaaa;
+}
+
+
 .fl {
     float: left; }
 
@@ -47,7 +53,7 @@ body a{
 
 .list-top{
     width: 100%;
-    height: 170px;
+    height: 225px;
 }
 .list-main{margin:0 auto;width: 1200px;height: 115px;}
 .list-a-logo{
@@ -113,6 +119,10 @@ body a{
     text-align: center;
     line-height: 55px;
 }
+.nav_d{
+           width: 100%;
+           float: left;
+       }
 
 
 

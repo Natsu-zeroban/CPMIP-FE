@@ -4,12 +4,12 @@ function s1next() {
 
         if(userType==='住建部门'){
             alert("选中的用户角色类型是：" + userType);
-            registers1form.action="gov-register.html?myRole="+0;
+            registers1form.action="gov-register.html?myRole="+3;
 
         }
         else if(userType==='质量监督管理部门'){
             alert("选中的用户角色类型是：" + userType);
-            registers1form.action="gov-register.html?myRole="+1;
+            registers1form.action="gov-register.html?myRole="+2;
 
         }
     }

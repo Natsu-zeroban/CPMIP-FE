@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="../../lib/html5.js"></script>
+  <script type="text/javascript" src="../../lib/respond.min.js"></script>
+  <script type="text/javascript" src="../../lib/PIE_IE678.js"></script>
+  <![endif]-->
+  <link href="../../css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="../../lib/Hui-iconfont/1.0.1/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+  <!--[if IE 6]>
+  <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+  <script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>我的桌面</title>
+</head>
+<body>
+<div class="pd-20" style="padding-top:20px;">
+  <p class="f-20 text-success">欢迎登录 <b> 建筑工程质量监管信息化平台！</b></p>
+  <div id="container" style="min-width:700px;height:400px"></div>
+    <table class="table table-border table-bordered table-bg">
+        <thead>
+        <tr>
+            <th colspan="7" scope="col">信息统计</th>
+        </tr>
+        <tr class="text-c">
+            <th>案卷编码</th>
+            <th>企业名称</th>
+            <th>事项名称</th>
+            <th>受理部门</th>
+            <th>提交时间</th>
+            <th>案卷状态</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="text-c">
+            <td>201907010001</td>
+            <td>红丝绒建筑工程有限公司</td>
+            <td>企业月周报自评备案表</td>
+            <td>质量监督管理部门</td>
+            <td>2019年7月1日</td>
+            <td style="color: red">办理中···</td>
+        </tr>
+        <tr class="text-c">
+            <td>201906250111</td>
+            <td>红丝绒建筑工程有限公司</td>
+            <td>已备案起重机械设备登记</td>
+            <td>质量监督管理部门</td>
+            <td>2019年6月25日</td>
+            <td style="color: red">办理中···</td>
+        </tr>
+        <tr class="text-c">
+            <td>201906225727</td>
+            <td>红丝绒建筑工程有限公司</td>
+            <td>建筑起重机械使用登记</td>
+            <td>质量监督管理部门</td>
+            <td>2019年6月22日</td>
+            <td style="color: red">办理中···</td>
+        </tr>
+        <tr class="text-c">
+            <td>201906103345</td>
+            <td>红丝绒建筑工程有限公司</td>
+            <td>质量监督管理部门</td>
+            <td>项目考评季报备案</td>
+            <td>2019年6月10日</td>
+            <td style="color: red">办理中···</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src="../../lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../../lib/layer/1.9.3/layer.js"></script>
+<script type="text/javascript" src="../../js/H-ui.js"></script>
+<script type="text/javascript" src="../../js/H-ui.admin.js"></script>
+<script type="text/javascript" src="../../lib/Highcharts/4.1.7/js/highcharts.js"></script>
+<script type="text/javascript" src="../../lib/Highcharts/4.1.7/js/modules/exporting.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: '建筑业企业主要指标年度统计表'
+            },
+            subtitle: {
+                text: 'Source: CPMIP.com'
+            },
+            xAxis: {
+                categories: [
+                    '2018.7',
+                    '2018.8',
+                    '2018.9',
+                    '2018.10',
+                    '2018.11',
+                    '2018.12',
+                    '2019.1',
+                    '2019.2',
+                    '2019.3',
+                    '2019.4',
+                    '2019.5',
+                    '2019.6'
+                ]
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '累计值 (万元)'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} 万元（累计值）</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: '签订合同金额_累计值',
+                data: [14312.2, 15445.6, 17564.3, 19875.6, 20994.9, 22005.6, 23998.7,24997.5 , 26108.5, 27669.5, 29416.4,30333.3]
+
+            }, {
+                name: '总产值_累计值',
+                data: [16260, 17392, 18343, 19435, 20211, 21003, 21994, 23406, 25302, 27003, 28958, 30172]
+
+            }, {
+                name: '竣工产值_累计值',
+                data: [15600,16633.3, 17670.9, 18700.5, 19715.6,20730.4, 21750, 22771.8, 23793.9, 24830.7,25869.8, 26914.4]
+
+            }]
+        });
+    });
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F080836300300be57b7f34f4b3e97d911' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

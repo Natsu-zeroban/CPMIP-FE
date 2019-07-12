@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../page/commonStyle/commonCss.css">
+    <link rel="stylesheet" href="../../node_modules/layui-src/src/css/layui.css">
+    <link rel="stylesheet" href="../page/user-login/uers-login.css">
+    <style>
+        .layui-form-label {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+<script src="../../node_modules/layui-src/src/layui.js"></script>
+<script src="../page/commonJs/layui.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../page/commonJs/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<div class="centerBox" style="position: center;width:670px;">
+    <h1 style="text-align: center; margin-top: 10px">新增质量事故报告</h1>
+    <form class="layui-form" action="" id="">
+        <!--定义标题-->
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 10px;">
+            <legend>新增质量事故报告：</legend>
+        </fieldset>
+        <!--新增安全事故报告-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程名称:</label>
+            <div class="layui-input-block">
+                <input type="text" id="qualityAR_construname" lay-verify="required" lay-reqtext="请输入工程名称！"
+                       placeholder="请输入工程名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">施工单位:</label>
+            <div class="layui-input-block">
+                <input type="text" id="qualityAR_construction" lay-verify="required" lay-reqtext="请输入施工单位名称！"
+                       placeholder="请输入施工单位名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">建设单位:</label>
+            <div class="layui-input-block">
+                <input type="text" id="qualityAR_build" lay-verify="required" lay-reqtext="请输入建设单位名称！"
+                       placeholder="请输入建设单位名称" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">工程实施地点:</label>
+            <div class="layui-input-block">
+                <input type="text" id="qualityAR_position" lay-verify="required" lay-reqtext="请输入工程实施地点！"
+                       placeholder="请输入工程实施地点" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+                <label class="layui-form-label">事故发生时间：</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="qualityAR_happenTime" lay-reqtext="请输入事故发生时间！" lay-verify="reporttime" placeholder="格式：yyyy-MM-dd HH:mm:ss 例子：2019-06-27 11:09:15" style="width: 500px;">
+                </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">事故上报时间：</label>
+            <div class="layui-input-inline">
+                <input type="text" class="layui-input" id="qualityAR_reportTime" lay-reqtext="请输入事故上报时间！" lay-verify="reporttime" placeholder="格式：yyyy-MM-dd HH:mm:ss 例子：2019-06-27 11:09:15" style="width: 500px;">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">事故发生地点:</label>
+            <div class="layui-input-block">
+                <input type="text" id="qualityAR_accident" lay-verify="required" lay-reqtext="请输入事故发生地点！"
+                       placeholder="请输入事故发生地点" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">损失金额:</label>
+            <div class="layui-input-block">
+                <input type="text" id="qualityAR_money" lay-verify="required|number" lay-reqtext="请输入损失金额！"
+                       placeholder="请输入损失金额" autocomplete="off" class="layui-input gov-register-form">
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">事故起因经过结果分析：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" lay-reqtext="请输入内容" id="qualityAR_reason"
+                          class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">事故发生后采取的措施：</label>
+            <div class="layui-input-block">
+                <textarea placeholder="请输入内容" lay-reqtext="请输入内容" id="qualityAR_actions"
+                          class="layui-textarea"></textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <a class="layui-btn" lay-submit="" lay-filter="qualityARSubmit" style="">提 交</a>
+                <button type="reset" class="layui-btn layui-btn-primary">重 置</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function () {
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , laydate = layui.laydate;
+        laydate.render({
+            elem: '#test11'
+            ,format: 'yyyy年MM月dd日'
+        });
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+
+        form.render();
+
+        //提交form
+        form.on('submit(qualityARSubmit)', function (data) {
+            var field = data.field;
+            $.ajax({
+                url:'http://www.cpmip.cn/zlsg/add.do'
+                ,method:"post"
+                ,data:{
+                    construname: $.trim($('#qualityAR_construname').val()),
+                    construction: $.trim($('#qualityAR_construction').val()),
+                    build: $.trim($('#qualityAR_build').val()),
+                    happenTime: $.trim($('#qualityAR_happenTime').val()),
+                    reportTime: $.trim($('#qualityAR_reportTime').val()),
+                    reason: $.trim($('#qualityAR_reason').val()),
+                    actions: $.trim($('#qualityAR_actions').val()),
+                    position: $.trim($('#qualityAR_position').val()),
+                    accident: $.trim($('#qualityAR_accident').val()),
+                    money: $.trim($('#qualityAR_money').val())
+                }
+                ,xhrFields:{
+                    withCredentials:true
+                }
+
+                });
+            layer.msg("提交成功！", {time: 1200}, function () {
+                window.location.href = "close.html";
+            });
+        })
+    });
+</script>
+</body>
+</html>
